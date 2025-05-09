@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olos Pedas Gurih</title>
+  <link rel="stylesheet" href="halaman_utama.css">
+  <script>
+    let kuponCount = 0;
+    let pointCount = 0;
+
+    function updateCount(type) {
+      if (type === 'kupon') {
+        kuponCount++;
+        document.getElementById('kuponCount').innerText = kuponCount;
+      } else if (type === 'point') {
+        pointCount++;
+        document.getElementById('pointCount').innerText = pointCount;
+      }
+    }
+
+    function resetCount(type) {
+      if (type === 'kupon') {
+        kuponCount = 0;
+        document.getElementById('kuponCount').innerText = kuponCount;
+      } else if (type === 'point') {
+        pointCount = 0;
+        document.getElementById('pointCount').innerText = pointCount;
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <img src="logo_olos.png" alt="Logo Olos" class="logo-img">
+      <span>Olos Pedas Gurih</span>
+    </div>
+    
+    <ul class="nav-links">
+      <li><a href="#deskripsi">Deskripsi</a></li>
+      <li><a href="#video">Video promosi</a></li>
+      <li><a href="#misi">Misi</a></li>
+      <li><a href="#galeri">Galeri</a></li>
+      <li><a href="#kupon">Kupon</a></li>
+      <li><a href="https://www.tiktok.com/@olos.pedas.gurih6?_t=ZS-8wDIOhbVgQb&_r=1" target="_blank">TikTok</a></li>
+    </ul>
+  </nav>
+
+  <!-- Deskripsi Produk -->
+  <section id="deskripsi" class="section">
+    <h2>Deskripsi Produk</h2>
+    <div class="content-row">
+      <img src="Screenshot.png" alt="Olos">
+      <div class="desc-box">
+        <h3>Olos</h3>
+        <p>Olos adalah makanan khas Tegal yang berbahan dasar tepung dan dibentuk bulat seperti bola. Adonan bulatan itu kemudian diisi dengan kembang kol, bawang dan cabai rawit.</p>
+      </div>
+    </div>
+    <div class="highlight-box">
+      <img src="katalog.png" alt="logo">
+      <h3>Ayo, Beli Olos Khas Tegal</h3>
+      <p>Di jamin pedesnya bikin ketagihan</p>
+    </div>
+  </section>
+
+  <!-- Video Promosi -->
+  <section id="video" class="section">
+    <h2>Video promosi</h2>
+    <div class="content-row">
+      <video width="400" controls>
+        <source src="Olos_Pedas_dan_Gurih.mp4" type="video/mp4">
+        Browser Anda tidak mendukung video.
+      </video>
+      <!-- <div class="desc-box">
+        <h3>Video promosi</h3>
+      </div> -->
+    </div>
+  </section>
+
+  <!-- Galeri Produk -->
+  <section id="galeri" class="section">
+    <h2>Galeri produk</h2>
+    <div class="galeri-grid">
+      <img src="kemasan.png".jpg" alt="Produk 1">
+      <img src="gmb1.jpg" alt="Produk 2">
+      <img src="gmb2.jpg" alt="Produk 3">
+      <img src="gmb3.jpg" alt="Produk 4">
+      <img src="gmb4.jpg" alt="Produk 5">
+      <img src="gmb5.jpg" alt="Produk 6">
+    </div>
+  </section>
+
+  <!-- Misi -->
+  <section id="misi" class="section">
+    <h2>Misi</h2>
+    <div class="content-row">
+      <img src="gmb6.jpg" alt="Olos Goreng">
+      <div class="desc-box">
+        <h3>Misi Kami</h3>
+        <p>Mengangkat makanan khas Tegal agar lebih dikenal masyarakat luas. dan Memberdayakan potensi lokal melalui produksi rumahan yang kreatif dan berkelanjutan.</p>
+      </div>
+    </div>
+    <div class="misi-foto-row">
+      <img src="photo.jpg" alt="Olos Goreng 1">
+    </div>
+    <div class="highlight-box">
+      <h3>Olos Pedas Gurih</h3>
+      <p>Olos Pedas Gurih didirikan pada tahun 2025 di Kota Tegal, Jawa Tengah. Berawal dari resep keluarga yang diwariskan secara turun-temurun.</p>
+    </div>
+  </section>
+
+  <!-- Fitur Kupon -->
+  <section id="kupon" class="section">
+    <h2>Kupon</h2>
+    <div class="highlight-box">
+      <button class="btn" onclick="updateCount('kupon')">CEK KUPON</button>
+      <button class="btn reset" onclick="resetCount('kupon')">RESET KUPON</button>
+      <p>Jumlah Kupon: <span id="kuponCount">0</span></p>
+    </div>
+  </section>
+
+  <!-- Fitur Loyalty -->
+  <section id="loyalty" class="section">
+    <h2>Point Loyalty</h2>
+    <div class="highlight-box">
+      <button class="btn" onclick="updateCount('point')">POINT</button>
+      <button class="btn reset" onclick="resetCount('point')">RESET POINT</button>
+      <p>Jumlah Poin: <span id="pointCount">0</span></p>
+    </div>
+  </section>
+
+</body>
+</html>
